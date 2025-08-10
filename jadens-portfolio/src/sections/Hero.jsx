@@ -31,7 +31,7 @@ const Hero = () => {
           <img
             src="/images/cartoon-me.png"
             alt="cartoon-me"
-            className="w-52 md:w-80 lg:w-[300px] object-contain"
+            className="mt-10 w-52 md:w-80 lg:w-[300px] object-contain"
           />
         </header>
       </div>
