@@ -28,6 +28,7 @@ const Projects = () => {
           tools="React, TailwindCss, Java, Springboot, etc."
           //   gitHubLink = ""
           //   liveDemo = ""
+          //Use React-icons for tools part of projectBlock
         />
         <ProjectBlock
           title="SUSH.IO"
@@ -36,6 +37,7 @@ const Projects = () => {
           tools="React, TailwindCss, Java, Springboot, etc."
           //   gitHubLink = ""
           //   liveDemo = ""
+          //Use React-icons for tools part of projectBlock
         />
         <ProjectBlock
           title="SUSH.IO"
@@ -44,6 +46,7 @@ const Projects = () => {
           tools="React, TailwindCss, Java, Springboot, etc."
           //   gitHubLink = ""
           //   liveDemo = ""
+          //Use React-icons for tools part of projectBlock
         />
         <ProjectBlock
           title="SUSH.IO"
@@ -52,6 +55,7 @@ const Projects = () => {
           tools="React, TailwindCss, Java, Springboot, etc."
           //   gitHubLink = ""
           //   liveDemo = ""
+          //Use React-icons for tools part of projectBlock
         />
       </motion.div>
     </div>
