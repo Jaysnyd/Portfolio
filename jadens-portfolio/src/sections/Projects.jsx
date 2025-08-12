@@ -8,7 +8,7 @@ const Projects = () => {
       id="projects"
       className="min-h-screen bg-transparent px-4 py-12 text-black"
     >
-      <h1 className="mb-10 mt-0 pt-0 lg:mt-20 text-4xl font-medium flex justify-center">
+      <h1 className="mb-10 mt-0 pt-0 lg:mt-20 text-3xl sm:text-4xl md:text-6xl font-semibold flex justify-center">
         PROJECTS
       </h1>
 
@@ -81,7 +81,7 @@ const Block = ({ className = "", ...rest }) => {
       }}
       initial="initial"
       whileInView="animate"
-      viewport={{ once: false, amount: 0.2 }} // Triggers at 20% VIEW
+      viewport={{ once: true, amount: 0.2 }} // Triggers at 20% VIEW
       className={twMerge(
         "col-span-4 rounded-lg border-2 border-black bg-white hover:bg-black hover:text-white transition-colors duration-400 p-6",
         className
@@ -94,7 +94,7 @@ const Block = ({ className = "", ...rest }) => {
 // Once we have valid projects to add to our portfolio, wrap the buttons with an anchor tag pointing to the correct live demo and gitHub links which we will pass to the ProjectBlock component as props then destructure them =>
 const ProjectBlock = ({ title, descr, imgPath, tools }) => {
   return (
-    <Block className="col-span-12 row-span-2 md:col-span-6">
+    <Block className="col-span-12 row-span-4 md:col-span-6">
       <div id="projectContainer" className="flex flex-col md:flex-row gap-4">
         <div id="descrContainer" className="w-full md:w-1/2">
           <h1 className="mb-2 text-3xl md:text-4xl font-medium leading-tight">

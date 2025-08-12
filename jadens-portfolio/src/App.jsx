@@ -3,6 +3,7 @@ import Hero from "./sections/Hero";
 import NavBar from "./components/NavBar";
 import Projects from "./sections/Projects";
 import BG from "./components/BG";
+import Skills from "./sections/Skills";
 
 const App = () => {
   return (
@@ -10,6 +11,7 @@ const App = () => {
       {/* <BG /> */}
       <NavBar />
       <Hero />
+      <Skills />
       <Projects />
     </>
   );

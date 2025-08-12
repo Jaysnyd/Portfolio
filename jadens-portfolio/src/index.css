@@ -79,3 +79,8 @@
     background-position: 0% 50%;
   }
 }
+
+/* Background image for page  */
+/* .background {
+  @apply bg-[url(/images/BG.jpg)] absolute inset-0 bg-no-repeat bg-cover bg-center z-0;
+} */
