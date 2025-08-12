@@ -1,5 +1,6 @@
 import { navLinks } from "../constants/index.js";
 import { useState, useEffect } from "react";
+// import resumePdf from "./Resume_JadenSnyder.pdf";
 
 const NavBar = () => {
   // Define state, track if user has scrolled
@@ -44,7 +45,7 @@ const NavBar = () => {
               </li>
             ))}
             <li className="group">
-              <a href="">
+              <a href="/Resume_JadenSnyder.pdf" target="_blank">
                 <span>Resume </span>
                 <span className="underline "></span>
               </a>
