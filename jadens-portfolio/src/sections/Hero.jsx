@@ -6,8 +6,6 @@ const Hero = () => {
       id="hero"
       className="mb-20 md:mb-0 relative overflow-hidden flex justify-center items-center"
     >
-      {/* bg  */}
-
       {/* Layout  */}
       <div className="hero-layout">
         {/* Left Content  */}

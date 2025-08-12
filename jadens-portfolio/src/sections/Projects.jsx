@@ -1,5 +1,5 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { animate, easeInOut, motion } from "framer-motion";
 import { twMerge } from "tailwind-merge";
 
 const Projects = () => {
@@ -11,7 +11,16 @@ const Projects = () => {
       <h1 className="mb-10 mt-0 pt-0 lg:mt-20 text-4xl font-medium flex justify-center">
         PROJECTS
       </h1>
-      <div className="mx-auto max-w-4xl grid grid-cols-12 gap-4">
+
+      <motion.div
+        initial="initial"
+        whileInView="animate"
+        viewport={{ once: true, amount: 0.1 }}
+        transition={{
+          staggerChildren: 0.1,
+        }}
+        className="mx-auto max-w-4xl grid grid-cols-12 gap-4"
+      >
         <ProjectBlock
           title="SUSH.IO"
           descr="Online pvp game similar to Agar.io but with Sushi!"
@@ -44,7 +53,7 @@ const Projects = () => {
           //   gitHubLink = ""
           //   liveDemo = ""
         />
-      </div>
+      </motion.div>
     </div>
   );
 };
@@ -53,7 +62,26 @@ export default Projects;
 
 const Block = ({ className = "", ...rest }) => {
   return (
-    <div
+    <motion.div
+      variants={{
+        initial: {
+          scale: 0.5,
+          y: 50,
+          opacity: 0,
+        },
+        animate: {
+          scale: 1,
+          y: 0,
+          opacity: 1,
+        },
+      }}
+      transition={{
+        ease: "easeInOut",
+        duration: 0.5,
+      }}
+      initial="initial"
+      whileInView="animate"
+      viewport={{ once: false, amount: 0.2 }} // Triggers at 20% VIEW
       className={twMerge(
         "col-span-4 rounded-lg border-2 border-black bg-white hover:bg-black hover:text-white transition-colors duration-400 p-6",
         className
@@ -97,7 +125,7 @@ const ProjectBlock = ({ title, descr, imgPath, tools }) => {
           <img
             src={imgPath}
             alt={title}
-            className="rounded-lg object-contain w-full max-w-[280px] md:max-w-[320px] lg:max-w-[400px]"
+            className="rounded-lg object-contain w-full max-w-[280px] md:max-w-[320px] lg:max-w-[400px] border border-2 border-white"
           />
         </div>
       </div>

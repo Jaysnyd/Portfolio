@@ -17,10 +17,6 @@ const navLinks = [
     name: "Certifications",
     link: "#certs",
   },
-  {
-    name: "Resume",
-    link: "#resume",
-  },
 ];
 
 const projects = [

@@ -43,6 +43,12 @@ const NavBar = () => {
                 </a>
               </li>
             ))}
+            <li className="group">
+              <a href="">
+                <span>Resume </span>
+                <span className="underline "></span>
+              </a>
+            </li>
           </ul>
         </nav>
 
