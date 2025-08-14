@@ -15,12 +15,12 @@ const Skills = () => {
 
       <div
         id="skillsTable"
-        className="container-bg flex align-center justify-center rounded-lg pt-4 pb-4 w-full md:w-full lg:w-2/5 text-white "
+        className=" flex align-center justify-center rounded-lg pt-4 pb-4 w-full md:w-full lg:w-2/5 text-black "
       >
         <table>
           <tbody>
             <tr>
-              <td className="pl-3 pr-3 py-4">
+              <td className="pl-3 sm:pr-4 py-4">
                 <strong>Development Tools</strong>
               </td>
               <td className="pr-3 py-4">

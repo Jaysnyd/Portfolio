@@ -9,10 +9,6 @@ const Projects = () => {
       id="projects"
       className="min-h-screen bg-transparent px-4 py-12 text-black"
     >
-      {/* <h1 className="mb-10 mt-0 pt-0 lg:mt-20 text-1xl sm:text-2xl md:text-4xl font-semibold flex justify-center">
-        PROJECTS
-      </h1> */}
-
       <BubbleText text="PROJECTS" />
 
       <motion.div

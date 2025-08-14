@@ -12,11 +12,11 @@ const Certs = () => {
         CERTIFICATIONS
       </h1> */}
 
-      <BubbleText text="CERTS" />
+      <BubbleText text="CERTIFICATIONS" />
 
       <div
         id="cert-container"
-        className="w-full flex flex-col md:flex-row gap-3 justify-center items-center"
+        className="w-1/2 pb-8 md:pb-2 flex flex-col md:flex-row gap-3 justify-center items-center bg-white border border-black border-2 rounded-lg"
       >
         {certifications.map(({ name, imgPath, classes, certLink }) => (
           <div

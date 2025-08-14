@@ -10,13 +10,14 @@ import Experience from "./sections/Experience";
 const App = () => {
   return (
     <>
-      {/* <BG /> */}
-      <NavBar />
-      <Hero />
-      <Skills />
-      <Projects />
-      <Certs />
-      <Experience />
+      <div className="bg-styles">
+        <NavBar />
+        <Hero />
+        <Skills />
+        <Projects />
+        <Certs />
+        <Experience />
+      </div>
     </>
   );
 };

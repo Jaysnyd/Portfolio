@@ -29,7 +29,7 @@ const certifications = [
   {
     name: "CompTIA Network+",
     imgPath: "/images/networkPlus.png",
-    classes: "mb-0 md:mb-13 w-32 md:w-60 lg:w-[225px] object-contain",
+    classes: "mb-0 md:mb-13 w-32 md:w-35 lg:w-[225px] object-contain",
     certLink: "#",
   },
 ];

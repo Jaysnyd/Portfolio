@@ -67,14 +67,6 @@
   }
 }
 
-/* Container BG  */
-.container-bg {
-  background: radial-gradient(at 99% 97%, #106ee8 0px, transparent 50%),
-    radial-gradient(at 99% 20%, #4682b4 0px, transparent 50%),
-    radial-gradient(at 100% 96%, #7f8be6 0px, transparent 50%),
-    radial-gradient(at 99% 81%, #2e44cc 0px, transparent 50%), #000000;
-}
-
 /* Bubble Text component styles:  */
 .hoverText {
   transition: 0.35s font-weight, 0.35s color;
@@ -103,4 +95,13 @@
 
 .hoverText:has(+ .hoverText + .hoverText:hover) {
   font-weight: 300;
+}
+
+/* Full Background  */
+.bg-styles {
+  background-image: url("/images/white-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
 }
