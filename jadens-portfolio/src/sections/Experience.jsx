@@ -19,7 +19,7 @@ const Experience = () => {
 
       <div id="exp-container" className="w-1/2 flex flex-col gap-6 ">
         {/* Experience Cards  */}
-        {expCards.map(({ jobTitle, jobDates, jobDescr }) => (
+        {expCards.map(({ jobTitle, imgPath, company, jobDates, jobDescr }) => (
           <motion.div
             key={jobTitle}
             variants={boxVariants}
@@ -28,7 +28,14 @@ const Experience = () => {
             viewport={{ once: true, amount: 0.8 }}
             className="flex flex-col border border-2 border-black p-3 rounded-lg"
           >
-            <h1 className="font-bold mb-1">{jobTitle}</h1>
+            <div className="flex pb-5 gap-5 md:gap-20 lg:gap-40">
+              <div className="flex-col w-4/6">
+                <h1 className="font-bold mb-1">{jobTitle}</h1>
+                <p>{company}</p>
+              </div>
+              <img src={imgPath} alt="Company-Logo" className="w-16 h-15" />
+            </div>
+
             <p className="mb-4">{jobDates}</p>
             <p>{jobDescr}</p>
           </motion.div>

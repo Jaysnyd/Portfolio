@@ -86,7 +86,7 @@ const Block = ({ className = "", ...rest }) => {
       whileInView="animate"
       viewport={{ once: true, amount: 0.2 }} // Triggers at 20% VIEW
       className={twMerge(
-        "col-span-4 rounded-lg border-2 border-black bg-white hover:bg-black hover:text-white transition-colors duration-400 p-6",
+        "col-span-4 rounded-lg border-2 border-black bg-transparent hover:bg-black hover:text-white transition-colors duration-400 p-6",
         className
       )}
       {...rest}
