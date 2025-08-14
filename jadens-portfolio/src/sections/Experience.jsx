@@ -30,13 +30,13 @@ const Experience = () => {
           >
             <div className="flex pb-5 gap-5 md:gap-20 lg:gap-40">
               <div className="flex-col w-4/6">
-                <h1 className="font-bold mb-1">{jobTitle}</h1>
+                <h1 className="font-bold  mb-1">{jobTitle}</h1>
                 <p>{company}</p>
               </div>
               <img src={imgPath} alt="Company-Logo" className="w-16 h-15" />
             </div>
 
-            <p className="mb-4">{jobDates}</p>
+            <p className="mb-4 font-semibold text-blue-800">{jobDates}</p>
             <p>{jobDescr}</p>
           </motion.div>
         ))}
