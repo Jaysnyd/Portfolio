@@ -5,6 +5,7 @@ import Projects from "./sections/Projects";
 import BG from "./components/BG";
 import Skills from "./sections/Skills";
 import Certs from "./sections/Certs";
+import Experience from "./sections/Experience";
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
       <Skills />
       <Projects />
       <Certs />
+      <Experience />
     </>
   );
 };

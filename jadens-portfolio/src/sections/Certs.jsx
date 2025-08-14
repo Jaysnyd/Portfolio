@@ -1,5 +1,6 @@
 import React from "react";
 import { certifications } from "../constants";
+import BubbleText from "../components/BubbleText";
 
 const Certs = () => {
   return (
@@ -7,9 +8,12 @@ const Certs = () => {
       id="certs"
       className="h-1/2 px-4 pb-16 mb-10 bg-transparent pt-5 flex flex-col items-center justify-center "
     >
-      <h1 className="mb-10 mt-0 pt-0 lg:mt-20 text-1xl sm:text-2xl md:text-4xl font-semibold flex justify-center">
+      {/* <h1 className="mb-10 mt-0 pt-0 lg:mt-20 text-1xl sm:text-2xl md:text-4xl font-semibold flex justify-center">
         CERTIFICATIONS
-      </h1>
+      </h1> */}
+
+      <BubbleText text="CERTS" />
+
       <div
         id="cert-container"
         className="w-full flex flex-col md:flex-row gap-3 justify-center items-center"

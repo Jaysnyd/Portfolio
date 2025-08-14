@@ -67,20 +67,40 @@
   }
 }
 
-/* BG  */
-@keyframes gradientShift {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+/* Container BG  */
+.container-bg {
+  background: radial-gradient(at 99% 97%, #106ee8 0px, transparent 50%),
+    radial-gradient(at 99% 20%, #4682b4 0px, transparent 50%),
+    radial-gradient(at 100% 96%, #7f8be6 0px, transparent 50%),
+    radial-gradient(at 99% 81%, #2e44cc 0px, transparent 50%), #000000;
 }
 
-/* Background image for page  */
-/* .background {
-  @apply bg-[url(/images/BG.jpg)] absolute inset-0 bg-no-repeat bg-cover bg-center z-0;
-} */
+/* Bubble Text component styles:  */
+.hoverText {
+  transition: 0.35s font-weight, 0.35s color;
+}
+
+.hoverText:hover {
+  font-weight: 900;
+  color: rgb(53, 54, 54);
+}
+
+/* To the right */
+.hoverText:hover + .hoverText {
+  font-weight: 500;
+  color: rgb(116, 116, 116);
+}
+
+.hoverText:hover + .hoverText + .hoverText {
+  font-weight: 300;
+}
+
+/* To the left */
+.hoverText:has(+ .hoverText:hover) {
+  font-weight: 500;
+  color: rgb(116, 116, 116);
+}
+
+.hoverText:has(+ .hoverText + .hoverText:hover) {
+  font-weight: 300;
+}

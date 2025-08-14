@@ -1,4 +1,5 @@
 import React from "react";
+import BubbleText from "../components/BubbleText";
 
 const Skills = () => {
   return (
@@ -6,12 +7,15 @@ const Skills = () => {
       id="skills"
       className="h-1/2 bg-transparent px-4 pb-16 pt-5 flex flex-col justify-center items-center"
     >
-      <h1 className="mb-10 mt-0 pt-0 lg:mt-20 text-1xl sm:text-2xl md:text-4xl font-semibold flex justify-center">
+      {/* <h1 className="mb-10 mt-0 pt-0 lg:mt-20 text-1xl sm:text-2xl md:text-4xl font-semibold flex justify-center">
         SKILLS
-      </h1>
+      </h1> */}
+
+      <BubbleText text="SKILLS" />
+
       <div
         id="skillsTable"
-        className="flex align-center justify-center border border-2 border-black rounded-lg pt-4 pb-4 w-full md:w-full lg:w-1/2 hover:bg-black hover:text-white transiton-colors duration-800 ease-in-out"
+        className="container-bg flex align-center justify-center rounded-lg pt-4 pb-4 w-full md:w-full lg:w-2/5 text-white "
       >
         <table>
           <tbody>
