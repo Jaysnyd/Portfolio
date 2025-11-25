@@ -27,6 +27,12 @@ const certifications = [
     pdfLink: "/AWS-CCP-Certificate.pdf",
   },
   {
+    name: "CompTIA Project+",
+    imgPath: "/images/ProjectPlus.png",
+    classes: "mb-2 md:mb-2 w-42 md:w-80 lg:w-[300px] object-contain",
+    pdfLink: "/CompTIA-ProjectPlus-Cert.pdf",
+  },
+  {
     name: "CompTIA IT Fundamentals+",
     imgPath: "/images/itf-cert.png",
     classes: "mb-2 md:mb-2 w-42 md:w-80 lg:w-[300px] object-contain",
