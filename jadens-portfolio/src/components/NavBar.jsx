@@ -45,7 +45,7 @@ const NavBar = () => {
               </li>
             ))}
             <li className="group">
-              <a href="/Resume_JadenSnyder.pdf" target="_blank">
+              <a href="/Resume-JadenSnyder.pdf" target="_blank">
                 <span>Resume </span>
                 <span className="underline "></span>
               </a>
