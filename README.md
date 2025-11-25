@@ -9,26 +9,19 @@ This site is designed to be fast, responsive, and simple to navigate — giving 
 🚀 Tech Stack
 
 React.js – Frontend framework
-
 JavaScript (ES6+)
-
 HTML5 / CSS3
-
 TailwindCSS Framework
-
 Vercel – Deployment + hosting
-
 AWS Lambda + API Gateway + SES – Serverless email function for contact form
-
 Git + GitHub – Version control
 
 📬 Features
-🔹 Responsive UI
 
+🔹 Responsive UI
 Optimized for desktop, tablet, and mobile.
 
 🔹 Projects Showcase
-
 A curated list of my strongest development projects, including frontend, backend, and full-stack builds.
 
 🔹 Skills Showcase and Work Experience
@@ -36,24 +29,16 @@ A curated list of my strongest development projects, including frontend, backend
 🔹 Attached PDF of my Resume
 
 🔹 Serverless Contact Form
-
-Built with AWS Lambda
-
-Exposed via API Gateway
-
-Uses SES to email inquiries directly to my Gmail
+- Built with AWS Lambda
+- Exposed via API Gateway
+- Uses SES to email inquiries directly to my Gmail
 
 🔹 Clean, Modern Design
-
 Focused on readability, speed, and a smooth user experience.
 
 
 📫 Contact
 
 Feel free to reach out:
-
-Portfolio: yourwebsite.com
-
-LinkedIn: [linkedin.com/in/your-link](https://www.linkedin.com/in/jadensnyder-dev/)
-
+LinkedIn: [linkedin.com/in/jadensnyder-dev]
 Email: jaysnyderrr@gmail.com
