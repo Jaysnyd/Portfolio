@@ -21,10 +21,10 @@ const Projects = () => {
         className="mx-auto max-w-4xl grid grid-cols-12 gap-4"
       >
         <ProjectBlock
-          title="SUSH.IO"
-          descr="Online pvp game similar to Agar.io but with Sushi!"
-          imgPath="/images/sushi-game.png"
-          tools="React, TailwindCss, Java, Springboot, etc."
+          title="Professional Portfolio"
+          descr="Features my Projects, Skills and Experience."
+          imgPath="/images/portfolio-ss.png"
+          tools="React, Tailwind, Vite, AWS SES/Lambda/API Gateway"
           //   gitHubLink = ""
           //   liveDemo = ""
           //Use React-icons for tools part of projectBlock

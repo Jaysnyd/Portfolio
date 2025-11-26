@@ -27,9 +27,10 @@ const Hero = () => {
             </a>
           </div>
           <img
-            src="/images/cartoon-me.png"
-            alt="cartoon-me"
-            className="mt-10 w-52 md:w-80 lg:w-[300px] object-contain"
+            src="/images/me-cropped.png"
+            alt="Photo of me"
+            className="mt-10 w-52 md:w-80 lg:w-[400px] object-contain"
+
           />
         </header>
       </div>
