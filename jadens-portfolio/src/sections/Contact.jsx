@@ -45,7 +45,7 @@ const Contact = () => {
       }
     } catch (error) {
       console.error("Error:", error);
-      alert("An error occurred while sending your message.");
+      alert("An error occurred while sending your message. Try again later.");
     }
   };
 

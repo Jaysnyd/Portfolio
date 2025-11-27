@@ -40,5 +40,5 @@ Focused on readability, speed, and a smooth user experience.
 📫 Contact
 
 Feel free to reach out:
-[LinkedIn](https://www.linkedin.com/in/your-linkedin-username/)
+[https://www.linkedin.com/feed/]
 Email: jaysnyderrr@gmail.com

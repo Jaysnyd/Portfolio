@@ -24,37 +24,33 @@ const Projects = () => {
           title="Professional Portfolio"
           descr="Features my Projects, Skills and Experience."
           imgPath="/images/portfolio-ss.png"
-          tools="React, Tailwind, Vite, AWS SES/Lambda/API Gateway"
-          //   gitHubLink = ""
-          //   liveDemo = ""
-          //Use React-icons for tools part of projectBlock
+          tools="React, Tailwind, Vite, Framer Motion"
+          githubLink="https://github.com/Jaysnyd/Portfolio"
+          liveDemo="#hero"
         />
         <ProjectBlock
-          title="SUSH.IO"
-          descr="Online pvp game similar to Agar.io but with Sushi!"
-          imgPath="/images/sushi-game.png"
-          tools="React, TailwindCss, Java, Springboot, etc."
-          //   gitHubLink = ""
-          //   liveDemo = ""
-          //Use React-icons for tools part of projectBlock
+          title="Email Serverless API"
+          descr="Serverless REST API for sending emails using AWS services. Integrated with contact form on my portfolio site. Emails sent directly to my inbox."
+          imgPath="/images/API-Architecture.png"
+          tools="AWS Lambda, API Gateway, SES, JavaScript, Node.js"
+          githubLink="https://github.com/Jaysnyd/Portfolio"
+          liveDemo="#contact"
         />
         <ProjectBlock
-          title="SUSH.IO"
-          descr="Online pvp game similar to Agar.io but with Sushi!"
-          imgPath="/images/sushi-game.png"
-          tools="React, TailwindCss, Java, Springboot, etc."
-          //   gitHubLink = ""
-          //   liveDemo = ""
-          //Use React-icons for tools part of projectBlock
+          title="Building"
+          descr="I am currently working on new projects, more details coming soon!"
+          imgPath="/images/working-on.png"
+          tools="n/a"
+          // githubLink=""
+          // liveDemo=""
         />
         <ProjectBlock
-          title="SUSH.IO"
-          descr="Online pvp game similar to Agar.io but with Sushi!"
-          imgPath="/images/sushi-game.png"
-          tools="React, TailwindCss, Java, Springboot, etc."
-          //   gitHubLink = ""
-          //   liveDemo = ""
-          //Use React-icons for tools part of projectBlock
+          title="Building"
+          descr="I am currently working on new projects, more details coming soon!"
+          imgPath="/images/working-on.png"
+          tools="n/a"
+          // githubLink=""
+          // liveDemo=""
         />
       </motion.div>
     </div>
@@ -94,42 +90,54 @@ const Block = ({ className = "", ...rest }) => {
   );
 };
 
-// Once we have valid projects to add to our portfolio, wrap the buttons with an anchor tag pointing to the correct live demo and gitHub links which we will pass to the ProjectBlock component as props then destructure them =>
-const ProjectBlock = ({ title, descr, imgPath, tools }) => {
+const ProjectBlock = ({
+  title,
+  descr,
+  imgPath,
+  tools,
+  githubLink,
+  liveDemo,
+}) => {
   return (
     <Block className="col-span-12 row-span-4 md:col-span-6">
-      <div id="projectContainer" className="flex flex-col md:flex-row gap-4">
-        <div id="descrContainer" className="w-full md:w-1/2">
+      {/* Main Container  */}
+      <div id="projectContainer" className="flex flex-col md:flex-col gap-3">
+        {/* TITLE - DESCRIPTION */}
+        <div id="descrContainer" className="w-full ">
           <h1 className="mb-2 text-3xl md:text-4xl font-medium leading-tight">
             {title}
           </h1>
           <p className="text-zinc-400 ">{descr}</p>
-          <p className="text-zinc-500 pt-2">
+          <p className="text-black pt-2">
             <strong>Tools:</strong> {tools}
           </p>
-          <button
-            type="button"
-            className="text-white bg-black border-2 rounded-lg py-2 px-4 md:py-3 md:px-6 font-medium w-35 md:w-45 mt-4 cursor-pointer hover:text-black hover:bg-white hover:border-black transition"
-          >
-            Live Demo
-          </button>
-          <button
-            type="button"
-            className="text-white bg-black border-2 rounded-lg py-2 px-4 md:py-3 md:px-6 font-medium w-35 md:w-45 mt-4 cursor-pointer hover:text-black hover:bg-white hover:border-black transition"
-          >
-            GitHub
-          </button>
         </div>
-
+        {/* IMAGE CONTAINER */}
         <div
           id="imgContainer"
-          className="w-full md:w-1/2 flex justify-center items-center"
+          className="w-full flex justify-center items-center"
         >
           <img
             src={imgPath}
             alt={title}
-            className="rounded-lg object-contain w-full max-w-[280px] md:max-w-[320px] lg:max-w-[400px] border border-2 border-white"
+            className="rounded-lg object-contain w-full h-52 max-w-[280px] md:max-w-[320px] lg:max-w-[400px]"
           />
+        </div>
+        {/* BUTTONS CONTAINER  */}
+        <div id="button-container" className="w-full flex gap-3 justify-center">
+          <a
+            href={liveDemo}
+            className="text-white bg-black border-2 rounded-lg py-2 px-4 md:py-3 md:px-6 font-medium w-35 md:w-45 mt-4 cursor-pointer hover:text-black hover:bg-white hover:border-black transition justify-center flex items-center"
+          >
+            Live Demo
+          </a>
+          <a
+            href={githubLink}
+            target="_blank"
+            className="text-white bg-black border-2 rounded-lg py-2 px-4 md:py-3 md:px-6 font-medium w-35 md:w-45 mt-4 cursor-pointer hover:text-black hover:bg-white hover:border-black transition justify-center flex items-center"
+          >
+            GitHub
+          </a>
         </div>
       </div>
     </Block>
