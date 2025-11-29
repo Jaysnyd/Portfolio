@@ -15,7 +15,7 @@ const Hero = () => {
               Jaden Snyder
             </h1>
             <p className="text-sm sm:text-base md:text-lg text-gray-600 pt-1">
-              Undergraduate Student, Software Engineer <br /> Based in Ohio, US
+              Software Engineer, Undergraduate Student<br /> Based in Ohio, US
             </p>
             <a href="#projects">
               <button
