@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import BubbleText from "../components/BubbleText";
 import { FaLinkedin } from "react-icons/fa";
 
@@ -11,14 +11,44 @@ const Contact = () => {
     floating_last_name: "",
   });
 
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  // Load reCAPTCHA script
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = `https://www.google.com/recaptcha/api.js?render=${
+      import.meta.env.VITE_RECAPTCHA_SITE_KEY
+    }`;
+    script.async = true;
+    document.body.appendChild(script);
+
+    return () => {
+      // Cleanup script on unmount
+      document.body.removeChild(script);
+    };
+  }, []);
+
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsSubmitting(true);
 
     try {
+      // Get reCAPTCHA token
+      const token = await window.grecaptcha.execute(
+        import.meta.env.VITE_RECAPTCHA_SITE_KEY,
+        { action: "submit_contact_form" }
+      );
+
+      // Prepare data with reCAPTCHA token
+      const dataToSend = {
+        ...formData,
+        recaptchaToken: token,
+      };
+
       const response = await fetch(
         "https://prmvt1ya09.execute-api.us-east-2.amazonaws.com/prod/EMAIL-FORM",
         {
@@ -26,9 +56,11 @@ const Contact = () => {
           headers: {
             "Content-Type": "application/json",
           },
-          body: JSON.stringify(formData),
+          body: JSON.stringify(dataToSend),
         }
       );
+
+      const data = await response.json();
 
       if (response.ok) {
         alert("Message sent successfully!");
@@ -40,12 +72,13 @@ const Contact = () => {
           floating_last_name: "",
         });
       } else {
-        const data = await response.json();
         alert(`Failed to send message: ${data.error || "Unknown error"}`);
       }
     } catch (error) {
       console.error("Error:", error);
       alert("An error occurred while sending your message. Try again later.");
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -68,6 +101,7 @@ const Contact = () => {
             className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-black dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
             placeholder=" "
             required
+            disabled={isSubmitting}
           />
           <label
             htmlFor="floating_email"
@@ -88,6 +122,7 @@ const Contact = () => {
             className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-black dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
             placeholder=" "
             required
+            disabled={isSubmitting}
           />
           <label
             htmlFor="floating_subject"
@@ -107,6 +142,7 @@ const Contact = () => {
             className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-black dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
             placeholder=" "
             required
+            disabled={isSubmitting}
           />
           <label
             htmlFor="floating_message"
@@ -129,6 +165,7 @@ const Contact = () => {
               className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-black dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
               placeholder=" "
               required
+              disabled={isSubmitting}
             />
             <label
               htmlFor="floating_first_name"
@@ -149,6 +186,7 @@ const Contact = () => {
               className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-black dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
               placeholder=" "
               required
+              disabled={isSubmitting}
             />
             <label
               htmlFor="floating_last_name"
@@ -159,21 +197,45 @@ const Contact = () => {
           </div>
         </div>
 
-        {/* SEND MESSAGE / LINKEDiN Button  */}
+        {/* SEND MESSAGE / LINKEDin Button  */}
         <div className="relative z-0 w-full mb-5 group"></div>
         <div className="flex gap-6">
           {/* Send  */}
           <button
             type="submit"
-            className="text-white bg-blue-700 hover:bg-blue-800 hover:cursor-pointer focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            disabled={isSubmitting}
+            className="text-white bg-blue-700 hover:bg-blue-800 hover:cursor-pointer focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 disabled:opacity-50 disabled:cursor-not-allowed"
           >
-            Send Message
+            {isSubmitting ? "Sending..." : "Send Message"}
           </button>
 
           {/* Linkedin Link  */}
           <a href="https://www.linkedin.com/in/jadensnyder-dev/">
             <FaLinkedin size={40} />
           </a>
+        </div>
+
+        {/* Google reCAPTCHA Badge Info */}
+        <div className="text-xs text-gray-500 mt-4">
+          This site is protected by reCAPTCHA and the Google{" "}
+          <a
+            href="https://policies.google.com/privacy"
+            className="underline"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Privacy Policy
+          </a>{" "}
+          and{" "}
+          <a
+            href="https://policies.google.com/terms"
+            className="underline"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Terms of Service
+          </a>{" "}
+          apply.
         </div>
       </form>
     </div>
