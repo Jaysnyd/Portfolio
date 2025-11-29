@@ -105,3 +105,21 @@
   background-attachment: fixed;
   min-height: 100vh;
 }
+
+/* Down Arrow animation  */
+.down-arrow {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 35px;     
+  height: 35px;    
+  animation: bounce 1.5s infinite ease-in-out;
+}
+
+@keyframes bounce {
+  0%   { transform: translateX(-50%) translateY(0); }
+  50%  { transform: translateX(-50%) translateY(6px); }
+  100% { transform: translateX(-50%) translateY(0); }
+}
+

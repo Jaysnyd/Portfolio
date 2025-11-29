@@ -15,7 +15,7 @@ const Hero = () => {
               Jaden Snyder
             </h1>
             <p className="text-sm sm:text-base md:text-lg text-gray-600 pt-1">
-              Software Engineer, Undergraduate Student<br /> Based in Ohio, US
+              Undergraduate Software Engineering Student,<br />Current IT Technician with 4+ Years Experience <br /> <br />Transitioning into Software Engineering by building real projects, sharpening my skills, and pursuing new opportunities.<br /><br />Based in Ohio, US
             </p>
             <a href="#projects">
               <button
@@ -33,6 +33,8 @@ const Hero = () => {
 
           />
         </header>
+
+        <div className="down-arrow"><img src="images/arrow.svg" alt="down-arrow" /></div>
       </div>
     </section>
   );

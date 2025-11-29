@@ -64,7 +64,7 @@ const expCards = [
       "Delivered remote technical support to Kroger store employees using self-checkout systems, scanners, and other POS technologies. Diagnosed software, hardware, and peripheral issues. Explained solutions clearly to non-technical users.",
   },
   {
-    jobTitle: "Helpdesk Support Technician",
+    jobTitle: "Support Technician",
     company: "Advanced Service Technologies",
     imgPath: "/images/AST.png",
     jobDates: "June 2021 - June 2022",

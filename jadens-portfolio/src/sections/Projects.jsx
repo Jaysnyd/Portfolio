@@ -30,7 +30,7 @@ const Projects = () => {
         />
         <ProjectBlock
           title="Email Serverless API"
-          descr="Serverless HTTP API for sending emails using AWS services. Integrated with contact form on my portfolio site. Emails sent directly to my inbox."
+          descr="Serverless HTTP API for sending emails using AWS services. Integrated with contact form on my portfolio site. Emails sent directly to my inbox. Secured with Google reCAPTCHA v3."
           imgPath="/images/API-Architecture.png"
           tools="AWS Lambda, API Gateway, SES, JavaScript, Node.js"
           githubLink="https://github.com/Jaysnyd/Portfolio"
